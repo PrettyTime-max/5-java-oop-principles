@@ -36,8 +36,8 @@ public class Bill {
      */
     public long getPrice() {
         long price = 0;
-        for (BillItem item: items) {
-            price += item.item.getPrice() * item.amount;
+        for (BillItem position: items) {
+            price += position.item.getPrice() * position.amount;
         }
         return price;
     }
@@ -45,8 +45,8 @@ public class Bill {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Счет к оплате\n");
-        for(BillItem item : items) {
-            sb.append(item.item.getName()).append('(').append(item.amount).append(')');
+        for(BillItem position : items) {
+            sb.append(position.item.getName()).append('(').append(position.amount).append(')');
             sb.append('\n');
         }
         sb.append("Сумма к оплате: ").append(getPrice());
