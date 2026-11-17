@@ -1,27 +1,53 @@
 package com.example.task03;
 
-/**
- * Класс, в котором собраны методы для работы с {@link TimeUnit}
- */
+
 public class TimeUnitUtils {
 
-    /**
-     * Конвертирует интервал в секундах в интервал в миллисекундах
-     *
-     * @param seconds интервал в секундах
-     * @return интервал в миллисекундах
-     */
-    public static Milliseconds toMillis(Seconds seconds) {
-        return new Milliseconds(seconds.toMillis());
+    public static Seconds toSeconds(Milliseconds source) {
+        return new Seconds(source.toSeconds());
     }
 
-    /**
-     * Конвертирует интервал в миллисекундах в интервал в секундах
-     *
-     * @param millis интервал в миллисекундах
-     * @return интервал в секундах
-     */
-    public static Seconds toSeconds(Milliseconds millis) {
-        return new Seconds(millis.toSeconds());
+    public static Minutes toMinutes(Milliseconds source) {
+        return new Minutes(source.toMinutes());
+    }
+
+    public static Hours getHours(Milliseconds source) {
+        return new Hours(source.getHours());
+    }
+
+    public static Milliseconds toMillis(Seconds source) {
+        return new Milliseconds(source.toMillis());
+    }
+
+    public static Minutes toMinutes(Seconds source) {
+        return new Minutes(source.toMinutes());
+    }
+
+    public static Hours getHours(Seconds source) {
+        return new Hours(source.getHours());
+    }
+
+    public static Milliseconds toMillis(Minutes source) {
+        return new Milliseconds(source.toMillis());
+    }
+
+    public static Seconds toSeconds(Minutes source) {
+        return new Seconds(source.toSeconds());
+    }
+
+    public static Hours getHours(Minutes source) {
+        return new Hours(source.getHours());
+    }
+
+    public static Milliseconds toMillis(Hours source) {
+        return new Milliseconds(source.toMillis());
+    }
+
+    public static Seconds toSeconds(Hours source) {
+        return new Seconds(source.toSeconds());
+    }
+
+    public static Minutes toMinutes(Hours source) {
+        return new Minutes(source.toMinutes());
     }
 }
